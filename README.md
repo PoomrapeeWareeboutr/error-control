@@ -18,19 +18,19 @@ Basically, when the program is called, the program would ask the user to input t
 ### Parity Check
 Input:
 - dataword: the dataword that the user needs to input can be a 1 or 2-dimensional array.
-    - i.e., 1-dimension dataword: 100101
-    - i.e., 2-dimension dataword: 100101 110101 100001
+    - i.e., 1-dimension `dataword: 100101`
+    - i.e., 2-dimension `dataword: 100101 110101 100001`
 - word size: the word size used to adjust the number of bits of the dataword.
-    - i.e., word size: 8
+    - i.e., `word size: 8`
 - parity type: used to determine what type of parity would be applied.
-    - i.e., parity type: one-even
-    - i.e., parity type: two-odd
+    - i.e., `parity type: one-even`
+    - i.e., `parity type: two-odd`
 - array size: array size is needed when a 2-dimension dataword is input to determine the row of the dataword array
-    - i.e., array size: 3
+    - i.e., `array size: 3`
     
 Output:
 - result: determine whether the codeword that sends to the receiver is lost the data or not, 1 no error and 0 for there is an error occurs.
-    - i.e., result: 1
+    - i.e., `result: 1`
 
 
 
