@@ -29,14 +29,14 @@ class ParityCheck:
             if context != 'odd':            # then, check the type is even parity or not if yes, error is occured.
                 return True                 
         return False                        # if the program has not entered any condition branch that means there is no error.
-
+    
     
     '''
         The function to wrap a dataword to a codeword before send to the physical layer.
     This function also known as the generator (for the sender).
     '''
     def parity_gen(self, dataword: list, word_size: int, parity_type: str, array_size: int) -> list:
-        dim, context = parity_type.split('-')       # split the parity_type variable to dim (dimension) and context (type of the parity) variable.
+        dim, context = parity_type.split('-')                           # split the parity_type variable to dim (dimension) and context (type of the parity) variable.
 
         # for 1 dimension
         if dim == 'one':                                                # if the dimension of the dataword is 1D, the program will go into this condition.
