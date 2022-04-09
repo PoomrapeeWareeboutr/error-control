@@ -24,9 +24,9 @@ class Checksum:
             
             current_size = len(checksum[2:])
             if current_size > word_size:                                # check whether the dataword size exceeds the limit number or not. if true, go to this branch. 
-                exceed = current_size - word_size                          
-                checksum = checksum[2 + exceed:]                        # split the bit that exceeds out of the checksum.
+                exceed = current_size - word_size        
                 remainder = checksum[2:2 + exceed]                      # save the exceeded bit into the 'remainder' variable.
+                checksum = checksum[2 + exceed:]                        # split the bit that exceeds out of the checksum.
                 
                 checksum = bin(int(checksum, 2) + int(remainder, 2))    # perform the add operation again between the checksum and the remainder.
         
@@ -38,14 +38,12 @@ class Checksum:
         Checksum generator (for the sender).
     '''
     def checksum_gen(self, dataword: list, word_size: int, num_blocks: int) -> list:
-        dataword = helper.insert_zeros(dataword, word_size, -1, 'one')
-
-        word_size = len(dataword) // num_blocks
         dataword = np.array_split(dataword, num_blocks)                 # split dataword into m blocks of the data.
-        dataword = [bit.tolist() for bit in dataword]       
+        dataword = [bit.tolist() for bit in dataword] 
         
+        dataword = helper.insert_zeros(dataword, word_size, num_blocks, 'two')
         checksum = self.addition(dataword, word_size, num_blocks)       # perform addition between each dataword in the array.
-        checksum = helper.insert_zeros(checksum, word_size, len(dataword[0]), 'one') # if the number of bits is not equal to word size then, insert 0 at the front to reach that number. 
+        checksum = helper.insert_zeros(checksum, word_size, -1, 'one')  # if the number of bits is not equal to word size then, insert 0 at the front to reach that number. 
         
         dataword.append(self.ones_complement(checksum))                 # add the checksum value to the end of the dataword and send it out.
         return dataword
