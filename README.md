@@ -32,8 +32,6 @@ Basically, when the program is called, the program would ask the user to input t
 - result: determine whether the codeword that sends to the receiver is lost the data or not, 1 no error and 0 for there is an error occurs.
     - i.e., `result: 1`
 
-
-
 ### Cyclic Redundancy Check
 #### Input:
 - dataword: the dataword that the user needs to input must be a 1-dimensional array.
@@ -48,8 +46,6 @@ Basically, when the program is called, the program would ask the user to input t
 - result: determine whether the codeword that sends to the receiver is lost the data or not, 1 no error and 0 for there is an error occurs.
     - i.e., `result: 1`
 
-
-
 ### Hamming Code
 #### Input:
 - dataword: the dataword that the user needs to input must be a 1-dimensional array.
@@ -59,8 +55,6 @@ Basically, when the program is called, the program would ask the user to input t
 - result: determine whether the codeword that sends to the receiver is lost the data or not, 1 no error and the position on the dataword for there is an error occurs.
     - i.e., `result: 1`
     - i.e., `result: 7`
-
-
 
 ### Checksum
 #### Input:
@@ -75,5 +69,3 @@ Basically, when the program is called, the program would ask the user to input t
 - result: determine whether the codeword that sends to the receiver is lost the data or not, 1 no error and 0 for there is an error occurs.
     - i.e., `result: 1`
     - i.e., `result: 0`
-
-
