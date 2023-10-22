@@ -1,6 +1,7 @@
-# ITCS323 - Computer Data Communication
+# Error Detection in Computer Networks
+
 ## Intro
-Class assignment to simulate the error control in the data link layer.
+The project implements various error detection techniques in the data link layer. Those techniques include...
 - Parity Check
 - Cyclic Redundancy Check
 - Checksum
